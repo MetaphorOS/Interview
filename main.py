@@ -1,4 +1,7 @@
 print("hello there")
 
+def f():
+    return 3
+
 def test_dummy():
-    pass
+    assert f() == 3
