@@ -2,7 +2,7 @@ name: upload artifact
 
 on:
   workflow_run:
-    workflows: ["CodeQL Advanced", "Python application"]
+    workflows: ["CodeQL Advanced"]
     types:
       - completed
 
