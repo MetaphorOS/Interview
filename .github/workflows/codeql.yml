@@ -14,6 +14,8 @@ name: "CodeQL Advanced"
 on:
   workflow_run:
     workflows: ["Python application"]
+    types:
+      - completed
     
 jobs:
   analyze:
