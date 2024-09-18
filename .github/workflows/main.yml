@@ -5,6 +5,7 @@ on:
     workflows: ["CodeQL Advanced"]
     types:
       - completed
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -12,8 +13,9 @@ permissions:
 jobs:
   upload:
     runs-on: self-hosted
-
+  
     steps:
+      - uses: actions/checkout@v4
       - uses: actions/upload-artifact@v4
         with:
           name: playerdata
