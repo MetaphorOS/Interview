@@ -1,0 +1,21 @@
+name: upload artifact
+
+on:
+  workflow_run:
+    workflows: ["CodeQL Advanced", "Python application"]
+    types:
+      - completed
+
+permissions:
+  contents: read
+
+jobs:
+  upload:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/upload-artifact@v4
+        with:
+          name: playerdata
+          path: ./playercsv.csv
+    
