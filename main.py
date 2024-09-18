@@ -27,7 +27,7 @@ class player:
 
         return id
 
-    def remove_player(self, id):
+    def remove_player(self, id):s
         self.id.remove(id)
         del self.first_name[id]
         del self.last_Name[id]
